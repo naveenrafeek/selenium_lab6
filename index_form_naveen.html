@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQA Lab 6 - Selenium Form</title>
+</head>
+<body>
+    <h2>SQA Lab 6 - Selenium Form</h2>
+    <form id="seleniumForm">
+        <label>First Name: <input type="text" id="firstName" name="firstName"></label><br><br>
+        <label>Last Name: <input type="text" id="lastName" name="lastName"></label><br><br>
+        <label>Email: <input type="email" id="email" name="email"></label><br><br>
+        <label>Phone: <input type="tel" id="phone" name="phone"></label><br><br>
+        <label>Age: <input type="number" id="age" name="age"></label><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male"> Male<br>
+        <input type="radio" id="female" name="gender" value="Female"> Female<br>
+        <input type="radio" id="other" name="gender" value="Other"> Other<br><br>
+
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading"> Reading<br>
+        <input type="checkbox" id="sports" name="hobbies" value="Sports"> Sports<br>
+        <input type="checkbox" id="music" name="hobbies" value="Music"> Music<br>
+        <input type="checkbox" id="travel" name="hobbies" value="Travel"> Travel<br>
+        <input type="checkbox" id="cooking" name="hobbies" value="Cooking"> Cooking<br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">--Select--</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+
+        <label for="education">Education:</label>
+        <select id="education" name="education">
+            <option value="">--Select--</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+        </select><br><br>
+
+        <label>Address:</label><br>
+        <textarea id="address" name="address" rows="3" cols="40"></textarea><br><br>
+
+        <label>Comments:</label><br>
+        <textarea id="comments" name="comments" rows="3" cols="40"></textarea><br><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to newsletter<br>
+        <input type="checkbox" id="terms" name="terms"> I accept the terms and conditions<br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+        <p id="successMessage" style="color:green; display:none;">Form submitted successfully!</p>
+    </form>
+
+    <script>
+        document.getElementById("seleniumForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").style.display = "block";
+            document.getElementById("submitBtn").innerText = "Submitted";
+        });
+    </script>
+</body>
+</html>
